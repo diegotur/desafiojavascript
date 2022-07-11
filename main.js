@@ -170,16 +170,20 @@ function GenerarCitacion (){
         }
 }
 }
-const generar = new GenerarCitacion();
+GenerarCitacion();
 
-const generador = generar;
 
-/* let citacionLunes; 
+
+let citacionLunes; 
 let citacionMartes;
 let citacionMiercoles;
 let citacionJueves;
-let citacionViernes; */
+let citacionViernes;
 
+let citaciones = [citacionLunes, citacionMartes, citacionMiercoles, citacionJueves, citacionViernes];
+
+for (i = 0; i < citaciones.length; i++){
+    
 function RellenarTurnos(relleno){
     this.chofer = relleno.chofer;
     this.turnoAsignado = relleno.turnoAsignado;
@@ -191,18 +195,148 @@ const asigTurnos1 = {
     turnoAsignado: "",
     horaCitacion: "",
 }    
-
 let turnoChofer1 = new RellenarTurnos(asigTurnos1);
 
-for (i = 0; i < listadoDeChoferes; i++){
-    if (listadoDeChoferes.cocheEfectivo === citacionCoches[0] && listadoDeChoferes.turno === "Mañana" && citacionCoches[0] === i){
-        turnoChofer1.chofer = listadoDeChoferes[i].legajo;
-        turnoChofer1.turnoAsignado = 1;
-        turnoChofer1.horaCitacion = "00:20";
-        break;
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[0] && listadoDeChoferes[i].turno === ("Mañana")){
+        turnoChofer1.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer1.turnoAsignado = primerTurno.numero;
+        turnoChofer1.horaCitacion = primerTurno.citacionTM;
+    }
+    
+const asigTurnos2 = {
+    chofer: "",
+    turnoAsignado: "",
+    horaCitacion: "",
+}    
+let turnoChofer2 = new RellenarTurnos(asigTurnos2);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[0] && listadoDeChoferes[i].turno === ("Tarde")){
+        turnoChofer2.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer2.turnoAsignado = primerTurno.numero;
+        turnoChofer2.horaCitacion = primerTurno.citacionTT;
     } 
     }
-document.write (turnoChofer1.horaCitacion);
+    const asigTurnos3 = {
+        chofer: "",
+        turnoAsignado: "",
+        horaCitacion: "",
+    }
+
+let turnoChofer3 = new RellenarTurnos(asigTurnos3);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[1] && listadoDeChoferes[i].turno === ("Mañana")){
+        turnoChofer3.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer3.turnoAsignado = segundoTurno.numero;
+        turnoChofer3.horaCitacion = segundoTurno.citacionTM;
+    } 
+    }
+const asigTurnos4 = {
+    chofer: "",
+    turnoAsignado: "",
+    horaCitacion: "",
+}    
+let turnoChofer4 = new RellenarTurnos(asigTurnos4);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[1] && listadoDeChoferes[i].turno === ("Tarde")){
+        turnoChofer4.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer4.turnoAsignado = segundoTurno.numero;
+        turnoChofer4.horaCitacion = segundoTurno.citacionTT;
+    } 
+    }
+    const asigTurnos5 = {
+        chofer: "",
+        turnoAsignado: "",
+        horaCitacion: "",
+    }
+let turnoChofer5 = new RellenarTurnos(asigTurnos5);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[2] && listadoDeChoferes[i].turno === ("Mañana")){
+        turnoChofer5.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer5.turnoAsignado = tercerTurno.numero;
+        turnoChofer5.horaCitacion = tercerTurno.citacionTM;
+    } 
+    }
+const asigTurnos6 = {
+    chofer: "",
+    turnoAsignado: "",
+    horaCitacion: "",
+}    
+let turnoChofer6 = new RellenarTurnos(asigTurnos6);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[2] && listadoDeChoferes[i].turno === ("Tarde")){
+        turnoChofer6.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer6.turnoAsignado = tercerTurno.numero;
+        turnoChofer6.horaCitacion = tercerTurno.citacionTT;
+    } 
+    }
+    const asigTurnos7 = {
+        chofer: "",
+        turnoAsignado: "",
+        horaCitacion: "",
+    }
+
+let turnoChofer7 = new RellenarTurnos(asigTurnos7);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[3] && listadoDeChoferes[i].turno === ("Mañana")){
+        turnoChofer7.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer7.turnoAsignado = cuartoTurno.numero;
+        turnoChofer7.horaCitacion = cuartoTurno.citacionTM;
+    } 
+    }
+const asigTurnos8 = {
+    chofer: "",
+    turnoAsignado: "",
+    horaCitacion: "",
+}    
+let turnoChofer8 = new RellenarTurnos(asigTurnos8);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[3] && listadoDeChoferes[i].turno === ("Tarde")){
+        turnoChofer8.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer8.turnoAsignado = cuartoTurno.numero;
+        turnoChofer8.horaCitacion = cuartoTurno.citacionTT;
+    } 
+    }
+    const asigTurnos9 = {
+        chofer: "",
+        turnoAsignado: "",
+        horaCitacion: "",
+    }
+let turnoChofer9 = new RellenarTurnos(asigTurnos9);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[4] && listadoDeChoferes[i].turno === ("Mañana")){
+        turnoChofer9.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer9.turnoAsignado = quintoTurno.numero;
+        turnoChofer9.horaCitacion = quintoTurno.citacionTM;
+    } 
+    }
+const asigTurnos10 = {
+    chofer: "",
+    turnoAsignado: "",
+    horaCitacion: "",
+}    
+let turnoChofer10 = new RellenarTurnos(asigTurnos10);
+
+for (i = 0; i < listadoDeChoferes.length; i++){
+    if (listadoDeChoferes[i].cocheEfectivo === citacionCoches[4] && listadoDeChoferes[i].turno === ("Tarde")){
+        turnoChofer10.legajo = listadoDeChoferes[i].legajo;
+        turnoChofer10.turnoAsignado = quintoTurno.numero;
+        turnoChofer10.horaCitacion = quintoTurno.citacionTT;
+    } 
+    }
+    citaciones[i] = [turnoChofer1, turnoChofer2, turnoChofer3, turnoChofer4, turnoChofer5, turnoChofer6, turnoChofer7, turnoChofer8, turnoChofer9, turnoChofer10];
+    }
+}
+
+console.log (citacionMartes.length);
 
 
 
@@ -212,12 +346,15 @@ for (let i = 0; i<listadoDeChoferes.length; i++){
     if (informarLegajo === listadoDeChoferes[i].legajo){
         let seleccionarDia = (prompt ("Bienvenido " + listadoDeChoferes[i].nombre + " " + listadoDeChoferes[i].apellido + ". Infórmenos día de citación solicitada (lunes, martes, etc)"));
             if (seleccionarDia ==="lunes"){
-                document.write (turnoChofer1);
+                for (d = 0; d < citacionLunes.length; d++);{
+                    if (citacionLunes[d].legajo === listadoDeChoferes[i].legajo) {
+                        console.log (citacionLunes[d].horaCitacion);
+                    }
+                }
             }
     }
-} */
-
-
+}
+ */
 
 
 
